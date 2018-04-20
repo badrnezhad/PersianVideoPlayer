@@ -2,7 +2,7 @@
 Customized Video Player in html
 By Hossein Badrnezhad
 
-<img src="src/VideoPlayer1.jpg" />
+<img src="src/VideoPlayer1.jpg"  align="center" />
 
 how to Install :
 ---
@@ -64,4 +64,4 @@ unmuteButton: 'data:image/png;base64,...',
 fullscreenButton: 'data:image/png;base64,...'
 ```
 
-<img src="src/VideoPlayer2.jpg" />
+<img src="src/VideoPlayer2.jpg" align="center" />
