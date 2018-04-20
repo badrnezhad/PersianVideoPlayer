@@ -1,6 +1,7 @@
 # PersianVideoPlayer
 Customized Video Player in html
-By Hossein Badrnezhad
+
+By <a href="http://hosseinbadrnezhad.ir">Hossein Badrnezhad</a>
 
 <img src="src/VideoPlayer1.jpg"  align="center" />
 
