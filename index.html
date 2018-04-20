@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Persian Video Player - By Hossein Badrnezhad</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/PersianVideoPlayer.min.css" rel="stylesheet" />
+    <link href="css/Demo.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div style="text-align:center;margin:20px auto;width:800px" class="video-container">
+            <div>
+                <video id="MyVideoPlayer" preload="metadata" poster="src/SampleVideo.jpg" style="width:800px;">
+                    <source src="src/SampleVideo.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <br />
+    <div style="text-align:center;">
+        <span>Designed &amp; Developed By </span> <a href="http://hosseinbadrnezhad.ir">Hossein Badrnezhad</a> <span>.</span>
+    </div>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/PersianVideoPlayer.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            //PersianPlayer("MyVideoPlayer");
+
+            PersianPlayer("MyVideoPlayer", {
+                padding: "5px",
+                borderRadius: "5px",
+                backgroundColor: "#5CB85C",
+                seekBackground: "#111",
+                seekColor: "#666",
+                volumeColor: "#4285F4",
+                volumeBackground: "#EA4335"
+            });
+
+        });
+    </script>
+</body>
+</html>
