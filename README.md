@@ -1,7 +1,7 @@
 # PersianVideoPlayer
 Customized Video Player in html
 
-By <a href="http://hosseinbadrnezhad.ir">Hossein Badrnezhad</a>
+By <a href="http://hosseinbadrnezhad.ir" target="_blank">Hossein Badrnezhad</a>
 
 <img src="src/VideoPlayer1.jpg"  align="center" />
 
