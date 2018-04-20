@@ -29,7 +29,7 @@ in footer =>
 </script>
 ```
 
-adding options :
+using options :
 
 ```html
 <script>
