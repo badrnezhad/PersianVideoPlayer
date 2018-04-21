@@ -62,7 +62,11 @@ playButton: 'data:image/png;base64,...',
 pauseButton: 'data:image/png;base64,...',
 muteButton: 'data:image/png;base64,...',
 unmuteButton: 'data:image/png;base64,...',
-fullscreenButton: 'data:image/png;base64,...'
+fullscreenButton: 'data:image/png;base64,...',
+advertiseIFrame: "https://persiancomputer.net/Content/Src/Images/Items/Persian3/final1-min.jpg",
+advertiseLink: "https://persiancomputer.net/",
+advertiseTimeSeconds: 3,
+advertiseEnable: true
 ```
 
 <img src="src/VideoPlayer2.jpg" align="center" />
