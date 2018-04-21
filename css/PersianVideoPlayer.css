@@ -159,3 +159,14 @@
     background-color: rgba(0,0,0,0.6);
     z-index: 9999999999;
 }
+
+.persian-video-advertise-box {
+    position: absolute;
+    overflow: hidden !important;
+    z-index: 9999999999;
+    display:none;
+}
+
+    .persian-video-advertise-box * {
+        overflow: hidden !important;
+    }
