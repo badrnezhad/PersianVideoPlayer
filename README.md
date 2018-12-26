@@ -67,7 +67,9 @@ unmuteButton: 'data:image/png;base64,...',
 fullscreenButton: 'data:image/png;base64,...',
 advertiseIFrame: "https://persiancomputer.net/Content/Src/Images/Items/Persian3/final1-min.jpg",
 advertiseTimeSeconds: 3,
-advertiseEnable: true
+advertiseEnable: true,
+width: '100%',
+watermarkUrl: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
 ```
 
 <img src="src/VideoPlayer2.jpg" align="center" />
