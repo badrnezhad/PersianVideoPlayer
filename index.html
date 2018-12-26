@@ -23,27 +23,29 @@
         <span>Designed &amp; Developed By </span> <a href="http://hosseinbadrnezhad.ir">Hossein Badrnezhad</a> <span>.</span>
     </div>
     <script src="js/jquery-1.10.2.min.js"></script>
-    <script src="js/PersianVideoPlayer.min.js"></script>
+    <script src="js/PersianVideoPlayer.js"></script>
 
     <script>
         $(document).ready(function () {
 
             //PersianPlayer("MyVideoPlayer");
-
-            PersianPlayer("MyVideoPlayer", {
-                padding: "5px",
-                borderRadius: "5px",
-                backgroundColor: "#5CB85C",
-                seekBackground: "#111",
-                seekColor: "#666",
-                volumeColor: "#4285F4",
-                volumeBackground: "#EA4335",
-                advertiseIFrame: "https://persiancomputer.net/Content/Src/Images/Items/Persian3/final1-min.jpg",
-                advertiseLink: "https://persiancomputer.net/",
-                advertiseTimeSeconds: 3,
-                advertiseEnable: true
-            });
-
+			setTimeout(function () {
+				var element = document.getElementById("MyVideoPlayer");
+				PersianPlayer(element, {
+					padding: "5px",
+					borderRadius: "5px",
+					backgroundColor: "#5CB85C",
+					seekBackground: "#111",
+					seekColor: "#666",
+					volumeColor: "#4285F4",
+					volumeBackground: "#EA4335",
+					advertiseIFrame: "https://persiancomputer.net/Content/Src/Images/Items/Persian3/final1-min.jpg",
+					advertiseLink: "https://persiancomputer.net/",
+					advertiseTimeSeconds: 3,
+					advertiseEnable: true,
+					width:"100%"
+				});
+			}, 1000);
         });
     </script>
 </body>
