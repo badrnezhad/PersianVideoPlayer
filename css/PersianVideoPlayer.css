@@ -1,4 +1,4 @@
-﻿.persian-video-wrapper-box {
+.persian-video-wrapper-box {
   width: fit-content !important;
   text-align: center;
   overflow: hidden;
@@ -25,38 +25,60 @@
 }
 .persian-video-wrapper-box .persian-video-controller-box .persian-video-controller-holder {
   width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 @media only screen and (max-width: 600px) {
   .persian-video-wrapper-box .persian-video-controller-box .persian-video-controller-holder .controller-holder-timer {
-    display: none;
+    display: none !important;
   }
   .persian-video-wrapper-box .persian-video-controller-box .persian-video-controller-holder .controller-holder-seek {
     margin-left: 1%;
   }
   .persian-video-wrapper-box .persian-video-controller-box .persian-video-controller-holder .controller-holder-mute {
-    width: 10% !important;
+    display: none !important;
+    margin-left: 1%;
+  }
+  .persian-video-wrapper-box .persian-video-controller-box .persian-video-controller-holder .controller-holder-vol {
+    margin-left: 5%;
   }
   .persian-video-wrapper-box .persian-video-controller-box .persian-video-controller-holder .controller-holder-fullscreen {
     margin-left: 2%;
   }
 }
 .persian-video-wrapper-box .persian-video-controller-box .persian-video-controller-holder .controller-holder-play {
-  width: 6%;
+  display: grid;
+  align-self: center;
+  flex-grow: 0.25;
 }
 .persian-video-wrapper-box .persian-video-controller-box .persian-video-controller-holder .controller-holder-timer {
-  width: 15%;
+  display: grid;
+  align-self: center;
+  flex-grow: 1.25;
 }
 .persian-video-wrapper-box .persian-video-controller-box .persian-video-controller-holder .controller-holder-seek {
-  width: 52%;
+  display: grid;
+  align-self: center;
+  flex-grow: 12;
 }
 .persian-video-wrapper-box .persian-video-controller-box .persian-video-controller-holder .controller-holder-mute {
-  width: 6%;
+  display: grid;
+  align-self: center;
+  flex-grow: 0.5;
 }
 .persian-video-wrapper-box .persian-video-controller-box .persian-video-controller-holder .controller-holder-vol {
-  width: 11%;
+  display: grid;
+  align-self: center;
 }
 .persian-video-wrapper-box .persian-video-controller-box .persian-video-controller-holder .controller-holder-fullscreen {
-  width: 6%;
+  display: grid;
+  align-self: center;
+  flex-grow: 0.25;
 }
 .persian-video-wrapper-box .persian-video-controller-box .persian-video-controller-holder div {
   display: inline-block;
@@ -73,7 +95,7 @@
   height: 30px;
   background-size: 75%;
   background-repeat: no-repeat;
-  margin: 5px 0 0 10px;
+  margin: 0 0 0 10px;
 }
 .persian-video-wrapper-box .persian-video-controller-box .persian-video-controller-holder div .btn-video-controller:focus {
   outline: 0 !important;
@@ -112,9 +134,9 @@
   /* Remove outline */
   opacity: 0.7;
   /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .2s;
+  -webkit-transition: 0.2s;
   /* 0.2 seconds transition on hover */
-  transition: opacity .2s;
+  transition: opacity 0.2s;
   position: relative;
   bottom: 5px;
 }
@@ -146,14 +168,14 @@
 }
 .persian-video-wrapper-box .persian-video-controller-box .persian-video-controller-holder div .timer-video-controller {
   font-size: 10px;
-  position: relative;
-  bottom: 14px;
-  margin: 0;
-  min-width: 50px;
-  max-width: 100px;
-  width: 100%;
-  display: inline-block;
-  text-align: center;
+  /*position: relative;
+                    bottom: 14px;
+                    margin: 0;
+                    min-width: 50px;
+                    max-width: 100px;
+                    width: 100%;
+                    display: inline-block;
+                    text-align: center;*/
 }
 .persian-video-wrapper-box .persian-video-controller-box .persian-video-controller-holder div .video-controller-volbar {
   margin: 4px 10px 0 0;
@@ -171,9 +193,9 @@
   /* Remove outline */
   opacity: 0.7;
   /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .2s;
+  -webkit-transition: 0.2s;
   /* 0.2 seconds transition on hover */
-  transition: opacity .2s;
+  transition: opacity 0.2s;
   position: relative;
   bottom: 5px;
 }
