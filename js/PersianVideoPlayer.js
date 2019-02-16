@@ -1,7 +1,7 @@
-﻿/**
+/**
  * Persian Video Player
  * By Hossein Badrnezhad
- * Version : 2.0.0
+ * Version : 2.0.1
  * Website : http://videoplayer.persiancomputer.net
  * Developer Website : http://hosseinbadrnezhad.ir
  */
@@ -35,7 +35,6 @@ var _defaultOptions = {
 
 // Constructor
 function PersianPlayer(element, options) {
-
     try {
 
         if (element == undefined || element == null) return;
@@ -302,7 +301,6 @@ function PersianVideoPlayerSeekVideo(e) {
 
 //Prepare to play/pause video
 function PersianVideoPlayerPlayVideo(e) {
-
     var videoId = e.id.replace("PlayButton_", "");
     var videoEle = document.getElementById(videoId);
     var options = PersianVideoPlayerGetOptions(videoId);
@@ -326,39 +324,45 @@ function PersianVideoPlayerPlayVideo(e) {
         var tmpImg = new Image();
         tmpImg.src = options.advertiseIFrame;
         var advWidth = 0;
-        $(tmpImg).one('load', function () {
-            advWidth = tmpImg.width;
-            if (advWidth > 0) {
-                options.WaitForAdvertise = true;
-                var advBox = document.getElementById("VideoAdvertise_" + videoId);
-                if (advBox != undefined && advBox != null) {
-                    var countdownNumberEl = $("#VideoAdvertise_" + videoId + " #countdown-number");
-                    var countdown = options.advertiseTimeSeconds + 1;
+        $(tmpImg).on('load',
+            function () {
+                advWidth = tmpImg.width;
+                if (advWidth > 0) {
+                    options.WaitForAdvertise = true;
+                    var advBox = document.getElementById("VideoAdvertise_" + videoId);
+                    if (advBox != undefined && advBox != null) {
+                        var countdownNumberEl = $("#VideoAdvertise_" + videoId + " #countdown-number");
+                        var countdown = options.advertiseTimeSeconds + 1;
 
-                    $("#VideoAdvertise_" + videoId + " svg circle")
-                        .css("animation", "countdown " + (options.advertiseTimeSeconds + 1) + "s linear infinite forwards");
+                        $("#VideoAdvertise_" + videoId + " svg circle")
+                            .css("animation",
+                            "countdown " + (options.advertiseTimeSeconds + 1) + "s linear infinite forwards");
 
-                    countdownNumberEl.html(countdown);
-
-                    var countdownInterval = setInterval(function () {
-                        countdown = countdown - 1;
-                        if (countdown < 0)
-                            countdown = 0;
                         countdownNumberEl.html(countdown);
-                    }, 1000);
 
-                    $(advBox).slideDown('slow').delay(options.advertiseTimeSeconds * 1000).queue(function () {
-                        PersianVideoPlayerDoPlay(e); $(advBox).remove();
-                        options.WaitForAdvertise = false;
-                        options.advertiseEnable = false;
-                        $("#FullScreen_" + videoId).show();
-                        clearInterval(countdownInterval);
-                    });
+                        var countdownInterval = setInterval(function () {
+                            countdown = countdown - 1;
+                            if (countdown < 0)
+                                countdown = 0;
+                            countdownNumberEl.html(countdown);
+                        },
+                            1000);
+
+                        $(advBox).slideDown('slow').delay(options.advertiseTimeSeconds * 1000).queue(function () {
+                            PersianVideoPlayerDoPlay(e);
+                            $(advBox).remove();
+                            options.WaitForAdvertise = false;
+                            options.advertiseEnable = false;
+                            $("#FullScreen_" + videoId).show();
+                            clearInterval(countdownInterval);
+                        });
+                    }
+                } else {
+                    PersianVideoPlayerDoPlay(e);
                 }
-            } else {
+            }).error(function () {
                 PersianVideoPlayerDoPlay(e);
-            }
-        })
+            });
     }
     else {
         PersianVideoPlayerDoPlay(e);
@@ -367,7 +371,6 @@ function PersianVideoPlayerPlayVideo(e) {
 
 //Start playing/pausing video
 function PersianVideoPlayerDoPlay(e) {
-
     var videoId = e.id.replace("PlayButton_", "");
     var videoEle = document.getElementById(videoId);
     var options = PersianVideoPlayerGetOptions(videoId);
@@ -472,8 +475,8 @@ function PersianVideoPlayerFullScreen(id) {
 function PersianVideoPlayerWatermark(id, url) {
     var options = PersianVideoPlayerGetOptions(id);
     return "<div id='VideoWatermark_" + id + "' class='persian-video-watermark-box'>" +
-        "       <div class='persian-video-watermark-holder'>"+
+        "       <div class='persian-video-watermark-holder'>" +
         "           <img src='" + url + "' />" +
-        "       </div>"+
+        "       </div>" +
         "   </div>";
 }
