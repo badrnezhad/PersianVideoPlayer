@@ -1,4 +1,4 @@
-﻿.persian-video-wrapper-box {
+.persian-video-wrapper-box {
     width: fit-content !important;
     text-align: center;
     overflow: hidden;
@@ -26,13 +26,20 @@
 
         .persian-video-controller-holder {
             width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
 
             @media only screen and (max-width: 600px) {
                 .controller-holder-play {
                 }
 
                 .controller-holder-timer {
-                    display: none;
+                    display: none !important;
                 }
 
                 .controller-holder-seek {
@@ -40,10 +47,12 @@
                 }
 
                 .controller-holder-mute {
-                    width: 10% !important;
+                    display: none !important;
+                    margin-left: 1%;
                 }
 
                 .controller-holder-vol {
+                    margin-left: 5%;
                 }
 
                 .controller-holder-fullscreen {
@@ -52,27 +61,38 @@
             }
 
             .controller-holder-play {
-                width: 6%;
+                display: grid;
+                align-self: center;
+                flex-grow: 0.25;
             }
 
             .controller-holder-timer {
-                width: 15%;
+                display: grid;
+                align-self: center;
+                flex-grow: 1.25;
             }
 
             .controller-holder-seek {
-                width: 52%;
+                display: grid;
+                align-self: center;
+                flex-grow: 12;
             }
 
             .controller-holder-mute {
-                width: 6%;
+                display: grid;
+                align-self: center;
+                flex-grow: 0.5;
             }
 
             .controller-holder-vol {
-                width: 11%;
+                display: grid;
+                align-self: center;
             }
 
             .controller-holder-fullscreen {
-                width: 6%;
+                display: grid;
+                align-self: center;
+                flex-grow: 0.25;
             }
 
 
@@ -91,7 +111,7 @@
                     height: 30px;
                     background-size: 75%;
                     background-repeat: no-repeat;
-                    margin: 5px 0 0 10px;
+                    margin: 0 0 0 10px;
 
                     &:focus {
                         outline: 0 !important;
@@ -161,14 +181,14 @@
 
                 .timer-video-controller {
                     font-size: 10px;
-                    position: relative;
+                    /*position: relative;
                     bottom: 14px;
                     margin: 0;
                     min-width: 50px;
                     max-width: 100px;
                     width: 100%;
                     display: inline-block;
-                    text-align: center;
+                    text-align: center;*/
                 }
 
                 .video-controller-volbar {
